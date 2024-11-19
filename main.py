@@ -21,7 +21,7 @@ _steps = [
 
 
 # This automatically reads in the configuration
-@hydra.main(config_name="config")
+@hydra.main(config_name='config')
 def go(config: DictConfig):
 
     # Setup the wandb experiment. All runs will be grouped under this name
@@ -107,7 +107,7 @@ def go(config: DictConfig):
                         "trainval_artifact" : "trainval_data.csv:latest",
                         "val_size": config['modeling']['val_size'],
                         "random_seed": config['modeling']['random_seed'],
-                        "stratify_by": "config['modeling']['stratify_by']",
+                        "stratify_by": config['modeling']['stratify_by'],
                         "rf_config": fp,
                         "max_tfidf_features": config['modeling']['max_tfidf_features'],
                         "output_artifact": "random_forest_export",
