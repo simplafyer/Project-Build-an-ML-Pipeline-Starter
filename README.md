@@ -179,3 +179,5 @@ Please, make sure all steps are using **the same** python version and that you h
 ## License
 
 [License](LICENSE.txt)
+
+https://wandb.ai/simplafyer-na/nyc_airbnb is the link to my W @ B page.
